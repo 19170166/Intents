@@ -18,11 +18,11 @@ public class inicio extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-        pantalla=(TextView) findViewById(R.id.cuenta);
-        CountDownTimer cdt = new CountDownTimer(5000,10000) {
+        pantalla=(TextView)findViewById(R.id.cuenta);
+        CountDownTimer cdt = new CountDownTimer(5000,1000) {
             @Override
             public void onTick(long segundos) {
-                pantalla.setText(String.valueOf(segundos/1000));
+                pantalla.setText(String.valueOf((segundos/1000)));
             }
 
             @Override

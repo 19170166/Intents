@@ -13,6 +13,7 @@ import org.w3c.dom.Text;
 
 public class inicio extends AppCompatActivity{
     TextView pantalla;
+    String nombre="angel",apellido="zapata";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,9 @@ public class inicio extends AppCompatActivity{
 
             @Override
             public void onFinish() {
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                Intent i=new Intent(inicio.this,MainActivity.class);
+                i.putExtra("nombre",nombre);
+                i.putExtra("apellido",apellido);
                 startActivity(i);
                 finish();
             }
